@@ -11,11 +11,19 @@ if ($url == "/about") {
     require "controllers/about.php";
 }
 
-if ($url == "/story") {
+elseif ($url == "/story") {
     require "controllers/story.php";
 }
 
-if ($url == "/index") {
+elseif ($url == "/") {
     require "controllers/index.php";
+}
+
+elseif ($url == "/index") {
+    require "controllers/index.php";
+}
+else {
+    http_response_code(404);
+    require "controllers/404.php";
 }
 
